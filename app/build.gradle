@@ -32,8 +32,8 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    dataBinding {
-        enabled = true
+    buildFeatures {
+        dataBinding = true
     }
 }
 
@@ -60,8 +60,8 @@ dependencies {
     kapt "androidx.room:room-compiler:2.4.2"
     implementation "androidx.room:room-ktx:2.4.2"
     // Coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1"
     // Dagger2
     implementation "com.google.dagger:dagger:2.28.3"
     kapt "com.google.dagger:dagger-compiler:2.28.3"
@@ -70,6 +70,6 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:2.9.0"
     implementation "com.squareup.okhttp3:logging-interceptor:4.9.3"
     // Glide
-    implementation "com.github.bumptech.glide:glide:4.13.1"
-    kapt "com.github.bumptech.glide:compliler:4.13.1"
+    implementation "com.github.bumptech.glide:glide:4.13.0"
+    kapt "com.github.bumptech.glide:compiler:4.13.0"
 }
