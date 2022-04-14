@@ -15,7 +15,11 @@ class TvShowRepositoryImpl(
     override suspend fun getTvShows(): List<TvShow>? = getTvShowsFromCache()
 
     override suspend fun updateTvShows(): List<TvShow>? {
-        TODO("Not yet implemented")
+        val newListOfArtists = getTvShowsFromAPI()
+        tvShowLocalDataSource.clearAll()
+        tvShowLocalDataSource.saveTvShowsToDB(newListOfArtists)
+        tvShowCacheDataSource.saveTvshowsToCache(newListOfArtists)
+        return newListOfArtists
     }
 
     suspend fun getTvShowsFromAPI(): List<TvShow> {
