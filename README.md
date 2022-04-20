@@ -1,4 +1,5 @@
 # MVVM-Clean-Architecture-Example-1
+<img src="./screenshot/clean.png"/></br>
 인기있는 영화 목록 불러오기</br>
 인기있는 배우 목록 불러오기</br>
 인기있는 티비쑈 목록 불러오기</br>
